@@ -7,22 +7,37 @@
   <style>
     html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
       overflow: hidden;
-    }
-    body {
       background: url('1338-019.jpeg') no-repeat center center fixed;
       background-size: cover;
+      font-family: sans-serif;
     }
-    audio {
-      display: none;
+
+    #playButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 16px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: opacity 1s ease;
+    }
+
+    #playButton.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-<source src="Life Goes On.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</body>
-</html>
+
+  <button id="playButton">🔊 Play Sound</button>
+
+  <audio id="audio" loop>
