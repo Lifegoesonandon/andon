@@ -41,3 +41,19 @@
   <button id="playButton">🔊 Play Sound</button>
 
   <audio id="audio" loop>
+    <source src="Life Goes On.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const button = document.getElementById('playButton');
+    const audio = document.getElementById('audio');
+
+    button.addEventListener('click', () => {
+      audio.play();
+      button.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>
